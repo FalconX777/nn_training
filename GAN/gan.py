@@ -74,8 +74,8 @@ def train(dl_train, dl_validation, disc, gen, num_epochs, nb_disc, nb_gen):
     writer = SummaryWriter()
     lr = 0.1
     beta = 0.01
-    optim_disc = torch.optim.Adam(disc.paramters(), lr=lr, betas=(beta, 0.999))
-    optim_gen = torch.optim.Adam(gen.paramters(), lr=lr, betas=(beta, 0.999))
+    optim_disc = torch.optim.Adam(disc.parameters(), lr=lr, betas=(beta, 0.999))
+    optim_gen = torch.optim.Adam(gen.parameters(), lr=lr, betas=(beta, 0.999))
     loss_fn = torch.nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
