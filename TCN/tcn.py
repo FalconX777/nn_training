@@ -115,7 +115,7 @@ def train(dl_train, dl_validation, model, num_epochs):
     writer = SummaryWriter()
     lr = 0.1
     beta = 0.01
-    optim = torch.optim.Adam(model.paramters(), lr=lr, betas=(beta, 0.999))
+    optim = torch.optim.Adam(model.parameters(), lr=lr, betas=(beta, 0.999))
     loss_fn = torch.nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
